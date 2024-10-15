@@ -21,6 +21,17 @@ dependencies {
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
 
 }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.github.gatelabs'
+            artifactId = 'tempo'
+            version = '0.7.0'
+
+            from components.java
+        }
+    }
+}
 
 test {
     testLogging {
