@@ -1,6 +1,6 @@
 package com.cesarferreira.tempo
 
-import org.amshove.kluent.`should be equal to`
+import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -19,7 +19,7 @@ class TempoTest {
         println(15.seconds.value)
         println("2016-06-14".toDate("yyyy-MM-dd"))
 
-        1 `should be equal to` 1
+        1.shouldBeEqualTo(1)
     }
 
     @Test

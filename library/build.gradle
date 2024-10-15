@@ -1,24 +1,13 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
-apply plugin: 'com.novoda.bintray-release'
 
 buildscript {
     repositories {
         jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.9.1'
+        mavenCentral()
     }
 }
 
-publish {
-    userOrg = 'cesarferreira'
-    groupId = 'com.github.cesarferreira'
-    artifactId = 'tempo'
-    desc = 'Kotlin intuitive Date extensions.'
-    website = 'https://github.com/cesarferreira/tempo'
-    publishVersion = '0.7.0'
-}
 
 dependencies {
 
@@ -26,7 +15,7 @@ dependencies {
 
     // tests
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.amshove.kluent:kluent:1.47'
+    testImplementation 'org.amshove.kluent:kluent-android:1.72'
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
 
 }
